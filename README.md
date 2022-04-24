@@ -39,19 +39,19 @@ $container->set("view", function($container) {
 
 	// Create smarty view
 	$view = new \Slim\Views\Smarty(
-		__DIR__, 											// Template dir
 		[
-			'cacheDir' =>  __DIR__ . "/data",				// Where to cache
-			'compileDir' =>  __DIR__ . "/data",				// Where to save compiled
-			'pluginsDir' =>  __DIR__ . "/data",				// Where to find custom plugins
+			'template_dir' => [__DIR__ . "/templates"],		// Where to put .tpl files
+			'compile_dir' =>  __DIR__ . "/templates_c",		// Where to save compiled
+
+			'cache_dir' =>  __DIR__ . "/templates_c",		// Where to cache
+			'caching' => FALSE,								// Enable usa of cache
+			'cache_lifetime' => 4600,						// Time for cache
+
+			'force_compile' => TRUE,						// Force to compile .tpl all the time (compile .tpl every time . this is slow for production)
+			'debugging' => FALSE,							// Enable debug console
+			'compile_check' => TRUE,						// Enable check if need compile (this will check timestamp of file and compile again. set to false for performance)
 		]
 	);
-
-	// @todo - Retrieve request, to get router and URI
-	// Register new smarty plugins 
-	// $smartyPlugins = new \Slim\Views\SmartyPlugins($container->get("router"), $container->get("request")->getUri());
-	// $view->registerPlugin('function', 'path_for', [$smartyPlugins, 'pathFor']);
-	// $view->registerPlugin('function', 'base_url', [$smartyPlugins, 'baseUrl']);
 
 	return $view;
 });

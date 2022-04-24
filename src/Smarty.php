@@ -40,23 +40,20 @@ class Smarty implements \ArrayAccess
      * @param string|array $paths Paths to templates directories
      * @param array $settings Smarty settings
      */
-    public function __construct($paths, $settings = [])
+    public function __construct($options = [])
     {
         $this->smarty = new \Smarty();
 
-        $this->smarty->setTemplateDir($paths);
+        $this->smarty->force_compile = $options['force_compile'];
+        $this->smarty->debugging = $options['debugging'];
+        $this->smarty->compile_check = $options['compile_check'];
+        
+        $this->smarty->cache_dir = $options['cache_dir'];
+        $this->smarty->caching = $options['caching'];
+        $this->smarty->cache_lifetime = $options['cache_lifetime'];
 
-        if (isset($settings['cacheDir'])) {
-            $this->smarty->setCacheDir($settings['cacheDir']);
-        }
-
-        if (isset($settings['compileDir'])) {
-            $this->smarty->setCompileDir($settings['compileDir']);
-        }
-
-        if (isset($settings['pluginsDir'])) {
-            $this->smarty->addPluginsDir($settings['pluginsDir']);
-        }
+        $this->smarty->template_dir = $options['template_dir'];
+        $this->smarty->compile_dir = $options['compile_dir'];
     }
 
     /********************************************************************************
