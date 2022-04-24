@@ -1,5 +1,5 @@
 {
-    "name": "scorninpc/smarty-view",
+    "name": "scorninpc/slim-smarty-view",
     "type": "library",
     "description": "Slim Framework 4 view helper built on top of the Smarty templating component",
     "keywords": ["slim","framework","view","template","smarty","slim 4"],
