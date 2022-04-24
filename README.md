@@ -1,10 +1,13 @@
 # Slim Framework 4 Smarty View
 
-This is a Slim Framework 4 view helper built on top of the Smarty templating component. You can use this component to create and render templates in your Slim Framework application.
+[![Latest Stable Version](http://poser.pugx.org/scorninpc/smarty-view/v)](https://packagist.org/packages/scorninpc/smarty-view) 
+[![Total Downloads](http://poser.pugx.org/scorninpc/smarty-view/downloads)](https://packagist.org/packages/scorninpc/smarty-view) 
+[![Latest Unstable Version](http://poser.pugx.org/scorninpc/smarty-view/v/unstable)](https://packagist.org/packages/scorninpc/smarty-view) 
+[![License](http://poser.pugx.org/scorninpc/smarty-view/license)](https://packagist.org/packages/scorninpc/smarty-view) 
 
-#### For the original repo and another version of Smarty and Slim Framework, see [mathmarques repo](https://github.com/mathmarques/Smarty-View)
+> This is a Slim Framework 4 view helper built on top of the Smarty templating component. You can use this component to create and render templates in your Slim Framework 4 application.
 
-## Install
+## How to install
 
 Via [Composer](https://getcomposer.org/)
 
@@ -12,9 +15,7 @@ Via [Composer](https://getcomposer.org/)
 $ composer require scorninpc/smarty-view "^2.0"
 ```
 
-Requires Slim Framework 4 and PHP 7.3 or newer.
-
-## Usage
+## Example
 
 ```
 <?php
@@ -69,10 +70,9 @@ $app->run();
 
 ```
 
-
 ## Credits
 
-- This project is only a fork to add examples and the package on packagist to work with composer, all credits of this nice rework are from [Matheus Marques](https://github.com/mathmarques)
+> This project is only a fork to add examples and the package on packagist to work with composer, all credits of this nice rework are from [Matheus Marques](https://github.com/mathmarques)
 
 ## License
 
