@@ -5,6 +5,11 @@
     "keywords": ["slim","framework","view","template","smarty","slim 4"],
     "license": "MIT",
     "authors": [
+         {
+            "name": "Bruno Gonçalves",
+            "email": "scorninpc@php.net",
+            "homepage": "http://andor.com.br"
+        },
         {
             "name": "Matheus Marques",
             "email": "matheusocmarques@gmail.com",
