@@ -12,7 +12,7 @@
 Via [Composer](https://getcomposer.org/)
 
 ```bash
-$ composer require scorninpc/smarty-view "2.*"
+$ composer require scorninpc/slim-smarty-view "2.*"
 ```
 
 ## Example
