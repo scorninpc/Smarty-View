@@ -91,10 +91,7 @@ class Smarty implements \ArrayAccess
      */
     public function fetch(string $template, $data = []): string
     {
-        if($data === NULL) {
-            $data = [];
-        }
-        $data = array_merge($this->defaultVariables, $data);
+        $data = array_merge($this->defaultVariables, $data??[]);
 
         $this->smarty->assign($data);
 
@@ -154,7 +151,7 @@ class Smarty implements \ArrayAccess
      *
      * @return mixed The key's value, or the default value
      */
-    public function offsetGet($key): mixed
+    public function offsetGet(mixed $key):mixed
     {
         return $this->defaultVariables[$key];
     }
@@ -165,7 +162,7 @@ class Smarty implements \ArrayAccess
      * @param string $key The data key
      * @param mixed $value The data value
      */
-    public function offsetSet($key, $value): void
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->defaultVariables[$key] = $value;
     }
@@ -175,7 +172,7 @@ class Smarty implements \ArrayAccess
      *
      * @param string $key The data key
      */
-    public function offsetUnset($key): void
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->defaultVariables[$key]);
     }
