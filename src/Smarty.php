@@ -162,7 +162,7 @@ class Smarty implements \ArrayAccess
      * @param string $key The data key
      * @param mixed $value The data value
      */
-    public function offsetSet(mixed $offset, mixed $value): void
+    public function offsetSet(mixed $key, mixed $value): void
     {
         $this->defaultVariables[$key] = $value;
     }
@@ -172,7 +172,7 @@ class Smarty implements \ArrayAccess
      *
      * @param string $key The data key
      */
-    public function offsetUnset(mixed $offset): void
+    public function offsetUnset(mixed $key): void
     {
         unset($this->defaultVariables[$key]);
     }
