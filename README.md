@@ -1,9 +1,9 @@
 # Slim Framework 4 Smarty View
 
-[![Latest Stable Version](http://poser.pugx.org/scorninpc/smarty-view/v)](https://packagist.org/packages/scorninpc/smarty-view) 
-[![Total Downloads](http://poser.pugx.org/scorninpc/smarty-view/downloads)](https://packagist.org/packages/scorninpc/smarty-view) 
-[![Latest Unstable Version](http://poser.pugx.org/scorninpc/smarty-view/v/unstable)](https://packagist.org/packages/scorninpc/smarty-view) 
-[![License](http://poser.pugx.org/scorninpc/smarty-view/license)](https://packagist.org/packages/scorninpc/smarty-view) 
+[![Latest Stable Version](http://poser.pugx.org/scorninpc/slim-smarty-view/v)](https://packagist.org/packages/scorninpc/slim-smarty-view) 
+[![Total Downloads](http://poser.pugx.org/scorninpc/slim-smarty-view/downloads)](https://packagist.org/packages/scorninpc/slim-smarty-view) 
+[![License](http://poser.pugx.org/scorninpc/slim-smarty-view/license)](https://slim-smarty-view/packages/scorninpc/slim-smarty-view)
+<!-- [![Latest Unstable Version](http://poser.pugx.org/scorninpc/slim-smarty-vieww/v/unstable)](https://packagist.org/packages/scorninpc/slim-smarty-view)  -->
 
 > This is a Slim Framework 4 view helper built on top of the Smarty templating component. You can use this component to create and render templates in your Slim Framework 4 application.
 
