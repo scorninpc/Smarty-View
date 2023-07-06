@@ -17,7 +17,7 @@ $ composer require scorninpc/slim-smarty-view "2.*"
 
 ## Example
 
-```
+```php
 <?php
 
 use Psr\Http\Message\ResponseInterface as Response;
@@ -37,37 +37,36 @@ $app = AppFactory::create();
 // Set view in Container
 $container->set("view", function($container) {
 
-	// Create smarty view
-	$view = new \Slim\Views\Smarty(
-		[
-			'template_dir' => [__DIR__ . "/templates"],		// Where to put .tpl files
-			'compile_dir' =>  __DIR__ . "/templates_c",		// Where to save compiled
+  // Create smarty view
+  $view = new \Slim\Views\Smarty(
+    [
+      'template_dir' => [__DIR__ . "/templates"],   // Where to put .tpl files
+      'compile_dir' =>  __DIR__ . "/templates_c",   // Where to save compiled
 
-			'cache_dir' =>  __DIR__ . "/templates_c",		// Where to cache
-			'caching' => FALSE,								// Enable usa of cache
-			'cache_lifetime' => 4600,						// Time for cache
+      'cache_dir' =>  __DIR__ . "/templates_c",   // Where to cache
+      'caching' => FALSE,               // Enable usa of cache
+      'cache_lifetime' => 4600,           // Time for cache
 
-			'force_compile' => TRUE,						// Force to compile .tpl all the time (compile .tpl every time . this is slow for production)
-			'debugging' => FALSE,							// Enable debug console
-			'compile_check' => TRUE,						// Enable check if need compile (this will check timestamp of file and compile again. set to false for performance)
-		]
-	);
+      'force_compile' => TRUE,            // Force to compile .tpl all the time (compile .tpl every time . this is slow for production)
+      'debugging' => FALSE,             // Enable debug console
+      'compile_check' => TRUE,            // Enable check if need compile (this will check timestamp of file and compile again. set to false for performance)
+    ]
+  );
 
-	return $view;
+  return $view;
 });
 
 // Route
 $app->get('/', function (Request $request, Response $response, $args) {
 
-	return $this->get('view')->render($response, 'index.tpl', [
-		'variable' => "Hello!",
-	]);
-	
+  return $this->get('view')->render($response, 'index.tpl', [
+    'variable' => "Hello!",
+  ]);
+  
 });
 
 // Run
 $app->run();
-
 ```
 
 ## Credits
